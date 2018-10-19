@@ -1,0 +1,731 @@
+
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+	<title>掌厨-用心做顿好饭</title>
+	<meta charset="utf-8"/>
+	<meta name="baidu-site-verification" content="Ct6kECtav2" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+	<meta name="description" content="掌厨-视频菜谱网站，美食，食谱，菜谱网。拥有最多的美食做法、菜谱、食谱大全以及家常菜菜谱，做你最喜爱的美食网，菜谱网。想要享受美食的乐趣。找家常菜谱,上掌厨美食社区！"/>
+	<meta name="keywords" content="掌厨，掌厨美食，美食视频网，家常菜菜谱大全,美食社区,家常菜,菜谱大全, 菜谱，食谱" />
+	<link rel="stylesheet" type="text/css" href="http://pub.szzhangchu.com/web/v4.2/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="http://pub.szzhangchu.com/web/v4.2/css/swiper.min.css" />
+	<script type="text/javascript" src="http://pub.szzhangchu.com/web/v4.2/js/swiper.min.js"></script>
+	<script src="http://pub.szzhangchu.com/web/v4.2/js/jquery.min.js"></script>
+	<script src="http://pub.szzhangchu.com/web/v4.2/js/jquery.tmpl.min.js"></script>
+	<script src="http://pub.szzhangchu.com/web/v4.2/js/pagination.js"></script>
+	<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.5.0/skins/default/aliplayer-min.css" />
+	<script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.5.0/aliplayer-min.js"></script>
+	<script src="http://pub.szzhangchu.com/web/v4.2/js/functionGlobal.js"></script>
+</head>
+<body>
+<script>
+// 用户会话
+var userinfo=FunctionGlobal.userinfo;
+FunctionGlobal.fromtype=0;
+</script>
+<script src="http://pub.szzhangchu.com/web/v4.2/js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://pub.szzhangchu.com/web/v4.2/css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="http://pub.szzhangchu.com/web/v4.2/css/home/index.css"/>
+<script src="http://pub.szzhangchu.com/web/v4.2/js/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://pub.szzhangchu.com/web/v4.2/js/fastclick.js"></script>
+<style type="text/css" rel="stylesheet">
+    .search-content .placeholder{line-height:1.55rem;color:#828282;}
+    .search-content img{background-color:#fff;}
+    .search-content .placeholder{right:0;left:0;text-align: center;font-size:0.6rem;}
+    .search-content .ico{margin-top:0.1rem;margin-right:0.5rem;}
+    .search-content{padding:0;}
+    .md-search .search-wrap{padding:0.4rem 0rem;margin: 0 2.2rem;}
+    .search-wrap{background-color:transparent;}
+    .search-content{margin:0;}
+</style>
+<div class="body-wrap">
+	<header class="header-top">
+		<div class="left">
+            <span class="logo">
+                <a href="/index.php" class="ui-link">
+                    <img class="ico-login wimg" src="http://pub.szzhangchu.com/web/v4.2/images/logo-white.png">
+                </a>
+            </span>
+		</div>
+		<div class="md-search">
+			<div class="search-wrap">
+				<div class="search-content" onclick="find()">
+					<!--<img src="http://pub.szzhangchu.com/web/v4.2/images/newyear-search.png" class="wimg">-->
+					<div class="placeholder"><i class="ico ico-search"></i>请输入菜名或者食材搜索</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+            <span class="login">
+                <a id="loginIn" href="/login/index.html?" class="ui-link">
+                    <img class="ico-login wimg" src="http://pub.szzhangchu.com/web/v4.2/images/login-white.png">
+                </a>
+            </span>
+		</div>
+	</header>
+	<nav class="hd-nav">
+		<ul>
+			<li class="active"><a href="/index.php">首页</a></li>
+			<li><a href="/course/index.html?type=0">美食</a></li>
+			<li><a href="/course/index.html?type=2">健康</a></li>
+			<li><a href="/category/subtype.html?type=2">食材</a></li>
+			<li><a href="/category/subtype.html?">万道佳肴</a></li>
+			<!--<li><a href="/market/index.html?">商城</a></li>-->
+			<li><a href="/topic/index.html?">专题</a></li>
+			<li><a href="/scene/list.html?">场景</a></li>
+			<li><a href="/community/list.html?">社区</a></li>
+			<li><a href="/activity/index.html?">活动</a></li>
+			<li><a href="/Tour.html">新手入门</a></li>
+		</ul>
+	</nav>
+	<div class="banner">
+		<div class="swiper-container swiper-container-horizontal">
+			<div class="swiper-wrapper" id="banners-wrap">
+				<div class="swiper-slide">
+					<a href="http://h5.izhangchu.com/topic_view/index.html?&topic_id=373" target="_self">
+						<img src="http://img.szzhangchu.com/1538927439768_8186741965.jpg@640w_320h_1e_1c.jpg" class="wimg" alt="寒露 | 燥者润之">
+					</a>
+				</div><div class="swiper-slide">
+				<a href="http://h5.izhangchu.com/course/view.html?&type=1&series_id=214&food_course_id=7657" target="_self">
+					<img src="http://img.szzhangchu.com/1538123931728_2047669320.jpg@640w_320h_1e_1c.jpg" class="wimg" alt="#马蹄厨房#土豆泥披萨">
+				</a>
+			</div><div class="swiper-slide">
+				<a href="http://h5.izhangchu.com/course/view.html?&type=1&series_id=215&food_course_id=7651" target="_self">
+					<img src="http://img.szzhangchu.com/1538039502607_1074646963.jpg@640w_320h_1e_1c.jpg" class="wimg" alt="#食语集#手撕鸡">
+				</a>
+			</div><div class="swiper-slide">
+				<a href="http://h5.izhangchu.com/course/view.html?&type=1&series_id=199&food_course_id=7641" target="_self">
+					<img src="http://img.szzhangchu.com/1537345131661_8282296177.jpg@640w_320h_1e_1c.jpg" class="wimg" alt="#古人食#花想容">
+				</a>
+			</div><div class="swiper-slide">
+				<a href="http://h5.izhangchu.com/course/view.html?&type=1&series_id=226&food_course_id=7628" target="_self">
+					<img src="http://img.szzhangchu.com/1536823169723_2475390974.jpg@640w_320h_1e_1c.jpg" class="wimg" alt="#咕噜健身厨房#紫薯泥早餐碗">
+				</a>
+			</div>            </div>
+			<div class="swiper-pagination swiper-pagination-clickable">
+				<span class="swiper-pagination-bullet"></span>
+			</div>
+		</div>
+	</div>
+	<div class="catalog-md md">
+		<ul class="clearfix" id="categorys-wrap">
+			<li>
+				<a href="/category/subtype.html#1">
+					<img src="http://pub.szzhangchu.com/web/v4.2/images/ico/xiaochao-ico.png" class="img">
+					<span>三分钟小炒</span>
+				</a>
+			</li>
+			<li>
+				<a href="/category/subtype.html#2">
+					<img src="http://pub.szzhangchu.com/web/v4.2/images/ico/jiachangcai-ico.png" class="img">
+					<span>简易家常菜</span>
+				</a>
+			</li>
+			<li>
+				<a href="/category/subtype.html#3">
+					<img src="http://pub.szzhangchu.com/web/v4.2/images/ico/gurenshi-ico.png" class="img">
+					<span>古人食</span>
+				</a>
+			</li>
+			<li>
+				<a href="/category/subtype.html#4">
+					<img src="http://pub.szzhangchu.com/web/v4.2/images/ico/huncai-ico.png" class="img">
+					<span>荤菜帮</span>
+				</a>
+			</li>
+			<li>
+				<a href="/category/subtype.html#5">
+					<img src="http://pub.szzhangchu.com/web/v4.2/images/ico/sucai-ico.png" class="img">
+					<span>健康素菜</span>
+				</a>
+			</li>
+			<li>
+				<a href="/category/subtype.html#6">
+					<img src="http://pub.szzhangchu.com/web/v4.2/images/ico/haixian-ico.png" class="img">
+					<span>河鲜海味</span>
+				</a>
+			</li>
+
+		</ul>
+		<a href="/category/subtype.html?" target="_self" class="ui-link">
+			<div class="hd">
+				<div class="title">万道佳肴<i class="ico ico-more"></i></div>
+			</div>
+		</a>
+	</div>
+	<div class="all-scene-list" id="all-scene-wrap">
+		<div class="md-widget5 md">
+			<div class="news-swrap">
+				<a href="app://scene#51#">
+					<div class="hd">
+						<div class="title">今日新品<i class="ico ico-more"></i></div>
+					</div>
+				</a>
+				<div class="bd">
+					<ul class="clearfix" id="tops-wrap">
+						<li>
+							<a href="app://dish#16164#">
+								<div class="img-wrap">
+									<img src="http://img.szzhangchu.com/1536541952315_1253498761.jpg@180h_211w_1e_1c.jpg" alt="煎白兰地牛排">
+									<i class="ico ico-play"></i>
+								</div>
+								<div class="bar">
+									<p class="title">煎白兰地牛排</p>
+									<p class="sub-title" title="牛排每次吃味道都不一样，关键就在于调料，腌渍到位，调料到位，配菜到位，牛排的鲜香美味自然也就到位啦！">牛排每次吃味道都不一样，…</p>
+								</div>
+								<div class="bg"></div>
+							</a>
+						</li>
+						<li>
+							<a href="app://dish#16461#">
+								<div class="img-wrap">
+									<img src="http://img.szzhangchu.com/1536541853630_1000103924.jpg@180h_211w_1e_1c.jpg" alt="半熟芝士蛋糕">
+									<i class="ico ico-play"></i>
+								</div>
+								<div class="bar">
+									<p class="title">半熟芝士蛋糕</p>
+									<p class="sub-title" title="此款半熟芝士蛋糕，传统制作，采用新上乘技艺，添加
+各种进口原材料，多道工序。是引导烘焙界又一新款爆品。
+烤好的半熟芝士蛋糕口感嫩滑，冷冻后更好吃。">此款半熟芝士蛋糕，传统制…</p>
+								</div>
+								<div class="bg"></div>
+							</a>
+						</li>
+						<li>
+							<a href="app://dish#15715#">
+								<div class="img-wrap">
+									<img src="http://img.szzhangchu.com/1536542044002_5749900774.jpg@180h_211w_1e_1c.jpg" alt="缤纷吐司套餐">
+									<i class="ico ico-play"></i>
+								</div>
+								<div class="bar">
+									<p class="title">缤纷吐司套餐</p>
+									<p class="sub-title" title="当西柚遇到芒果、香蕉，就变化出了可口的缤纷果吐司。">当西柚遇到芒果、香蕉，就…</p>
+								</div>
+								<div class="bg"></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><div class="md-widget3 md">
+		<div class="scene-swap">
+			<a href="app://scene#90#">
+				<div class="hd">
+					<div class="title"> 早餐日记<i class="ico ico-more"></i></div>
+				</div>
+			</a>
+			<div class="bd">
+				<ul class="clearfix">
+					<li>
+						<a href="app://scene#90#">
+							<img src="http://img.szzhangchu.com/1451265613409_5692721921.jpg@288h_211w_1e_1c.jpg">
+							<div class="bar">
+								<span class="title">早餐日记</span>
+								<span class="sub-title">297道菜</span>
+							</div>
+							<div class="bg"></div>
+						</a>
+					</li>
+					<li>
+						<p class="top">
+							<a href="app://dish#11625#">
+								<img src="http://img.szzhangchu.com/1439368891868_8971114504.JPG@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+						<p>
+							<a href="app://dish#16087#">
+								<img src="http://img.szzhangchu.com/1495966087035_3470326540.jpg@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+					</li>
+					<li>
+						<p class="top">
+							<a href="app://dish#8533#">
+								<img src="http://img.szzhangchu.com/1439432585224_5817580672.JPG@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+						<p>
+							<a href="app://dish#16698#">
+								<img src="http://img.szzhangchu.com/1527476058071_9835142730.JPG@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="fd" title=""> 当我决定出发的时候，包里一定不能没有食物。…</div>
+		</div>
+	</div><div class="md-widget3 md">
+		<div class="scene-swap">
+			<a href="app://scene#235#">
+				<div class="hd">
+					<div class="title"> 原产地生鲜<i class="ico ico-more"></i></div>
+				</div>
+			</a>
+			<div class="bd">
+				<ul class="clearfix">
+					<li>
+						<a href="app://scene#235#">
+							<img src="http://img.szzhangchu.com/1505893870181_5752302029.jpg@288h_211w_1e_1c.jpg">
+							<div class="bar">
+								<span class="title">原产地生鲜</span>
+								<span class="sub-title">49道菜</span>
+							</div>
+							<div class="bg"></div>
+						</a>
+					</li>
+					<li>
+						<p class="top">
+							<a href="app://dish#16427#">
+								<img src="http://img.szzhangchu.com/1507537406005_3957371100.jpg@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+						<p>
+							<a href="app://dish#16416#">
+								<img src="http://img.szzhangchu.com/1503978689941_7958401705.jpg@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+					</li>
+					<li>
+						<p class="top">
+							<a href="app://dish#16431#">
+								<img src="http://img.szzhangchu.com/1507888110342_9135669696.jpg@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+						<p>
+							<a href="app://dish#16425#">
+								<img src="http://img.szzhangchu.com/1507884939760_2019227434.jpg@140h_211w_1e_1c.jpg">
+								<i class="ico ico-play"></i>
+							</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="fd" title=""> 做健康可口饭菜…</div>
+		</div>
+	</div><div class="scene-all"><a href="app://scenelist">
+		<div class="hd">
+			<div class="title">全部场景(167)<i class="ico ico-more"></i></div>
+		</div>
+	</a></div><div class="md-widget8 md">
+		<a href="app://boutiquepost" target="_self">
+			<div class="hd">
+				<div class="title">精选作品<i class="ico ico-more"></i></div>
+			</div>
+		</a>
+		<div class="bd">
+			<ul class="clearfix">
+				<li>
+					<a href="app://post#163576#">
+						<img src="http://img.szzhangchu.com/1536541200323_4054344275.jpg@212h_212w_1e_1c.jpg" class="wimg">
+					</a>
+					<div class="user-info">
+                                        <span class="headIcon">
+                                            <img src="http://img.szzhangchu.com/1520728666724_3274499432.jpg@68h_68w_1e_1c.jpg" class="wimg">
+                                        </span>
+						<p class="user-name">miao . ❤</p>
+					</div>
+				</li>
+				<li>
+					<a href="app://post#151831#">
+						<img src="http://img.szzhangchu.com/1529281621869_4636529423.jpg@212h_212w_1e_1c.jpg" class="wimg">
+					</a>
+					<div class="user-info">
+                                        <span class="headIcon">
+                                            <img src="http://img.szzhangchu.com/1457080143432_8004286259.jpg@68h_68w_1e_1c.jpg" class="wimg">
+                                        </span>
+						<p class="user-name">木匠的女儿</p>
+					</div>
+				</li>
+				<li>
+					<a href="app://post#149375#">
+						<img src="http://img.szzhangchu.com/1525964775830_0310035882.jpg@212h_212w_1e_1c.jpg" class="wimg">
+					</a>
+					<div class="user-info">
+                                        <span class="headIcon">
+                                            <img src="http://img.szzhangchu.com/1535499396223_8896375761.jpg@68h_68w_1e_1c.jpg" class="wimg">
+                                        </span>
+						<p class="user-name">熊大人</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="fd"> 晒美食，是对于平凡生活的热爱</div>
+	</div><div class="md-widget7 md">
+		<div class="cate-wrap">
+			<a href="app://subjectList">
+				<div class="hd">
+					<div class="title">专题<i class="ico ico-more"></i></div>
+				</div>
+			</a>
+			<div class="bd">
+				<ul>
+					<li>
+						<div class="item">
+							<a href="http://h5.izhangchu.com/topic_view/index.html?&topic_id=343">
+								<img src="http://img.szzhangchu.com/1526464116330_7594916123.jpg@640w_215h_1e_1c.jpg" class="wimg" alt="面食中的王者，深夜加班的陪伴者。">
+								<span class="title">面食中的王者，深夜加班的陪伴者。</span>
+								<span class="sub-title">呐，做人呢，最重要的是开心，不如我煮碗面给你吃，不要说我没提醒你，加班真的很适合吃面。</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<a href="http://h5.izhangchu.com/topic_view/index.html?&topic_id=357" target="_self">
+								<img src="http://img.szzhangchu.com/1530349017617_6687926900.jpg@640w_215h_1e_1c.jpg" class="wimg" alt="川菜之-味的调和">
+								<span class="title">川菜之-味的调和</span>
+								<span class="sub-title">百菜百味，需要调出来！</span>
+							</a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>    </div>
+	<footer class="footer"></footer>
+</div>
+<div class="copyright">
+	<p><a class="targetBlank" href="http://www.miibeian.gov.cn" target="_blank" style="color:#999;">粤ICP备14078563号</a> 深圳市金版文化数字传媒有限公司</p>
+	<div style="width:100%;margin:0 auto; padding:20px 0;">
+		<a class="targetBlank" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030402000542" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+			<i class="icon_netsecurity" style="float:left;display: inline-block;background-image: url('http://pub.szzhangchu.com/web/v4.2/images/ico/icon_netsecurity.png');
+            background-repeat: no-repeat;width: 20px;height: 20px;"></i>
+			<p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">粤公网安备 44030402000542号</p>
+		</a>
+	</div>
+</div>
+<div class="errormsg"></div>
+<div class="pop-loader hidden" style="display: none;">
+	<div class="loader-inner ball-spin-fade-loader">
+		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	</div>
+</div>
+<script>
+var shop=(function(){
+    // banner尺寸2:1
+    $(".banner").height($(".banner").width() * 0.5);
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        autoplay: 2000
+    });
+    function replaceAppAddress(){
+        var aList = $("body").find("a");
+        $.each(aList,function(i,item){
+            var obj = $(item);
+            var href = obj.attr("href");
+            obj.attr("target", "_self");
+            if(typeof href != 'undefined' && href){
+                var h5Link = FunctionGlobal.changeH5Link(href);
+                if(h5Link){
+                    obj.attr("href", h5Link);
+                }
+            }
+        });
+    };
+    function init(){
+        $(".search-content").on("click", function () {
+            window.location.href = $(this).attr("data-url")
+        });
+        $(".slipnav li").on("tap", function () {
+            $("#maskPage").hide().removeClass('mask-page');
+            $(".page").css("left", "0");
+            window.location.href = $(this).attr("data-url");
+        });
+        $("#delete-fixed-footer-download").on("tap", function () {
+            $("#footer-app").hide();
+        });//delete ad fixed
+        FastClick.attach(document.body);//点透
+        $("#loginIn").click(function(){
+            if(FunctionGlobal.isUserLogin(userinfo)){
+                $(this).attr("href","/user/center.html?");
+            }
+        });
+        if(FunctionGlobal.isUserLogin(userinfo)){
+            var param = {
+                methodName:"UserInfo",
+                version:"4.2",
+                user_id:userinfo.user_id,
+                _time:userinfo._time,
+                _signature:userinfo._signature
+            };
+            FunctionGlobal.SendPost(param,function(json){
+                if(json.code != 0){
+                    alert(json.msg);
+                    return;
+                }
+                FunctionGlobal.workspace.userinfo = json.data;
+                sessionStorage.setItem("userinfo", JSON.stringify(json.data));
+                if(!json.data.headphoto){
+                    $("#loginIn img").attr("src","http://img.szzhangchu.com/1445429526387_9171386134.jpg@48h_48w_1e_1c.jpg");
+                }else{
+                    $("#loginIn img").attr("src",json.data.headphoto + "@48h_48w_1e_1c.jpg");
+                }
+            });
+        };
+        replaceAppAddress();
+    }
+    init();
+})();
+
+
+</script>
+<script>
+    // 公共入口
+    $(document).ready(function(){
+        function init(){
+            // 是否app判断
+            if(FunctionGlobal.isFromZCApp()){
+                // 隐藏侧导航按钮
+                $("#popmenu").hide();
+            }else{
+                // 底部
+                foot_show();
+                // 加载时特效
+                pop_loader();
+                // 控制切换左侧导航和滑动效果
+                left_nav();
+            }
+            // 全局返回键
+            back_wrap();
+            // 当前窗口打开
+            addLinkSelf();
+        }
+        init();
+    });
+    // 控制切换左侧导航和滑动效果
+    function left_nav(){
+        var isHiden = true;
+        $("#popmenu").bind("tap", function () {
+            if (isHiden) {
+                setTimeout(function () {
+                    $(".leftnav").show();
+                    var swiper = new Swiper('.leftnav .swiper-container', {
+                        direction : 'vertical',
+                        slidesPerView:6,
+                        mousewheelControl : true,//鼠标滚轮
+                        mousewheelForceToAxis : true,//鼠标滚轮
+                        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+                        observeParents:true//修改swiper的父元素时，自动初始化swiper
+                    });
+                    $("html,body").addClass("ovfHiden"); //使网页不可滚动
+                    $("#maskPage").addClass('mask-page');
+                    $("#maskPage").show();
+                    $(".menu-wrap .ico").addClass("ico-menu-red");
+                    $(".page").css("left", "9.4rem");
+                    $(".footer-gap").css({"position":"relative","background":"#fff"});
+                    setTimeout(function () {
+                        $("#maskPage").on("click", function () {
+                            $("#maskPage").hide().removeClass('mask-page');
+                            $(".page").css("left", "0");
+                            $(".ico-menu-red").removeClass("ico-menu-red");
+                            $('html,body').removeClass('ovfHiden');//使网页恢复可滚动
+                            isHiden = true;
+                        });
+                    }, 300);
+                }, 100);
+            } else {
+                setTimeout(function () {
+                    $("#maskPage").hide().removeClass('mask-page');
+                    $(".page").css("left", "0");
+                    $(".ico-menu-red").removeClass("ico-menu-red");
+                    $('html,body').removeClass('ovfHiden');//使网页恢复可滚动
+                }, 100);
+            }
+            isHiden = !isHiden;
+        });
+    }
+    // 加载底部
+    function foot_show(){
+        $(document.body).append('<div class="footer-app layout-footer" id="footer-app"></div>');
+        $.ajax({
+            url:"/html/footer.html",
+            success:function(data){
+                $("#footer-app").append(data);
+                $("#delete-fixed-footer-download").on("click",function(){
+                    $("#footer-app").hide();
+                    //解决商品详情页底部按钮问题
+                    $(".user-submit-pd").css("padding","0.8rem 2rem");
+                });
+            }
+        });
+    }
+    // 加载时特效
+    function pop_loader(){
+        $(document.body).append('<div class="pop-loader hidden"><div class="loader-inner ball-spin-fade-loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div class="errormsg"></div>');
+    }
+
+          function find(){
+	            	window.location.href = 'file:///android_asset/index.html';
+	            	<!--window.location.href = 'https://www.douguo.com';-->
+
+	            }
+
+    // 当前窗口打开
+    function addLinkSelf(){
+        var aList = $("body").find("a");
+        $.each(aList,function(i,item){
+            $(item).attr("target", "_self");
+        });
+        // 首页底部备案跳转新页面
+        $(".targetBlank").attr("target","blank");
+    }
+    // 全局返回键
+    function back_wrap(){
+        $(".header-back-warp").on("click",function(){
+            if(FunctionGlobal.isFromZCApp()){
+                if(FunctionGlobal.GetQueryString('quitout')){
+                    // 原生购买>商品详情
+                    FunctionGlobal.QuitOut();
+                    return false;
+                }else{
+                    FunctionGlobal.exitWebView();
+                }
+            }else{
+                if (history.length > 1) {
+                    history.go(-1);
+                } else if (history.length == 1) {
+                    window.location.href = "/index.php"
+                }
+            }
+        });
+    }
+    // 给loading统一添加父元素
+    function loading_wrap(){
+        $("div.loading").wrap("<div></div>");
+        $("div.loading").parent().addClass("loading-wrap");
+        $("#load-ing").parent().hide();
+        $("#load-stop").parent().hide();
+    }
+
+    // 视频接口，播放器调用
+    function PlayerDate(dishes_id,videoType,cover,dishesType){
+        var param = {
+            methodName:"PlayVoucherUrl",
+            videoType:videoType, //视频类型 枚举 (1-菜肴，2-食材，3-美食IP，6-健康IP，7-新手入门-食材处理，8-新手入门-厨房技能)
+            id:dishes_id, //对应资源ID
+            dishesType: dishesType //当 videoType是菜肴的时,必填 只有菜肴分AB段 枚举类型: （A-视频A段，B-视频B段）
+        };
+        FunctionGlobal.SendPost(param,function(json){
+            $('#prismPlayer_wrap').append('<div class="prism-player" id="J_prismPlayer"></div>');
+            $('#J_prismPlayer').height($('#J_prismPlayer').width()*0.532);
+            var playURL = json.data.playURL;
+            WebAliplayer(dishes_id,videoType,cover,playURL,dishesType);
+        });
+    }
+
+    // 阿里云Web播放器
+    function WebAliplayer(dishes_id,videoType,cover,playURL,dishesType){
+        var u = navigator.userAgent;
+        var isIos = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var isAndroid= u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isQQ = u.match(/QQ\//i); //判断qq
+        var isMQQ = u.match(/MQQBrowser/i); //判断qq浏览器
+        var isWX = u.match(/MicroMessenger/i); //判断微信
+        // 安卓qq浏览器支持下载播放，所以做下面判断,不许QQ或qq浏览器打开，其他暂不考虑
+        if(isQQ || isMQQ){
+            if(isWX){
+                palyReady();
+            }else{
+                if(isIos){
+                    alert('浏览器不支持视频播放,请用微信或Safari打开网页');
+                }else(
+                    alert('浏览器不支持视频播放,请用微信或其他浏览器打开网页')
+                );
+                $("#J_prismPlayer").remove();
+                $('#prismPlayer_wrap img').remove();
+                $('#prismPlayer_wrap').append('<img class="wimg" src="' + cover +'"/>');
+            }
+        }else{
+            palyReady();
+        }
+        function palyReady(){
+            if(isIos || isAndroid ){
+                var Autoplay = false;
+            }else{
+                var Autoplay = true;
+            }
+            var player = new Aliplayer({
+                id: "J_prismPlayer",
+                autoplay: Autoplay,
+                controlBarVisibility:"click",
+                source : playURL,
+                cover:cover,
+            },function(player){
+                console.log('播放器创建好了。');
+                $(".prism-big-play-btn").css({'left':'50%','top':'50%','transform':'translate(-50%,-50%)'});
+                $(".prism-player a").css('font-size','0.65rem');
+                player.on('ready',function(e) {
+                    console.log('ddd')
+                    //判断为ip视频时（3为美食、6给健康），第一次播放时调用视频统计上报;
+                    if(videoType == '3'){
+                        var BType = 'foodcourse';
+                        ReportVideo(dishes_id,BType);
+                    }else if(videoType == '6'){
+                        var BType = 'healthycourse';
+                        ReportVideo(dishes_id,BType);
+                    };
+                    //player.fullscreenService.requestFullScreen();
+                });
+                player.on('play',function(e){
+                    // 安卓头部栏会遮挡部分视频，所以由此判断
+                    if(isWX){
+                        $(".header").css('z-index','0');
+                        $('#DishesView-wrap').css('margin-top',"10px");
+                    }
+                });
+                player.on('pause',function(e){
+                    if(isWX){
+                        $(".header").css('z-index','10000');
+                        $('#DishesView-wrap').css('margin-top',"0");
+                    }
+                })
+                player.on('ended',function(e){
+                    console.log(dishesType)
+                    // 菜谱详情页第一段播完，自动播放器下一段
+                    if(dishesType == "A"){
+                        $("#btn-process").click();
+                        $("#J_prismPlayer").click()
+                    }
+                })
+            });
+        }
+
+        // 视频统计上报成功
+        function ReportVideo(dishes_id,BType){
+            var param = {
+                methodName:"ReportVideo",
+                version:"5.04",
+                Btype:BType,
+                mainId:dishes_id,
+                device:'browse'
+            };
+            FunctionGlobal.SendPost(param,function(json){
+                console.log("视频统计上报成功")
+            });
+        }
+    }
+</script>
+<script>
+// 百度统计
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    // hm.src = "//hm.baidu.com/hm.js?078933d0bb9bf6d161f875dd8c0b1ac2";
+    hm.src = "//pub.szzhangchu.com/web/js/zhangchu_baidu_hm.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
